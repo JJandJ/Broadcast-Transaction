@@ -26,15 +26,19 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.gms.common.api.Response;
+import com.google.bitcoin.core.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
+import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+import static app.jjandj.broadcaster.Base43.byteArrayToHexString;
 import static com.android.volley.Request.Method.POST;
 
 public class TextActivity extends AppCompatActivity {
@@ -120,6 +124,11 @@ public class TextActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 transactionDataString = input.getText().toString();
+                if (transactionDataString.contains("-"))
+                {
+                    //TRANSACTION WAS ENTERED IN BASE43 FORMAT, NEED TO FORMAT IT TO HEX TO BROADCAST
+                    transactionDataString = convertBase43ToHex(transactionDataString);
+                }
                 textViewAddress.setText(transactionDataString);
                 broadcastNowButton.setVisibility(View.VISIBLE);
             }
@@ -215,5 +224,10 @@ public class TextActivity extends AppCompatActivity {
     }
 
 
-
+    public String convertBase43ToHex(String transactionDataString)
+    {
+        byte[] tx = Base43.decode(transactionDataString);
+        transactionDataString = byteArrayToHexString(tx);
+        return transactionDataString;
+    }
 }

@@ -123,8 +123,7 @@ public class QrCodeActivity extends AppCompatActivity implements View.OnClickLis
                     if (transactionData.contains("-"))
                     {
                         //QR CODE WAS IN BASE43 FORMAT, NEED TO FORMAT IT TO HEX TO BROADCAST
-
-                        convertBase43ToHex();
+                        transactionData = convertBase43ToHex(transactionData);
                     }
 
                     textViewAddress.setText(transactionData);
@@ -142,11 +141,11 @@ public class QrCodeActivity extends AppCompatActivity implements View.OnClickLis
         qrScan.initiateScan();
     }
 
-    public void convertBase43ToHex()
+    public String convertBase43ToHex(String base43String)
     {
-        byte[] tx = Base43.decode(transactionData);
-        transactionData = byteArrayToHexString(tx);
-
+        byte[] tx = Base43.decode(base43String);
+        String hexString = byteArrayToHexString(tx);
+        return hexString;
     }
 }
 
