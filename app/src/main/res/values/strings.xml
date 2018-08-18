@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Broadcast Transaction</string>
+    <string name="qrbutton">Get Transaction from QR Code (use camera)</string>
+    <string name="QrScanner">Start Camera</string>
+    <string name="textbutton">Get Transaction from Text (use paste)</string>
+    <string name="currency_prompt">Choose a currency</string>
+    <string-array name="currency_array">
+        <item>Bitcoin TESTNET</item>
+        <item>Bitcoin</item>
+       <!-- <item>Bitcoin Cash</item> -->
+        <item>Litecoin</item>
+        <!-- <item>Ethereum</item> -->
+        <!-- <item>Ethereum Classic</item> -->
+        <item>DASH</item>
+        <item>ZCASH</item>
+        <item>DOGECOIN</item>
+        <item>Litecoin TESTNET</item>
+        <item>DASH TESTNET</item>
+        <item>ZCASH TESTNET</item>
+        <item>DOGECOIN TESTNET</item>
+        <!-- <item>NANO</item> -->
+    </string-array>
+</resources>

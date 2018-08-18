@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+        android:paddingBottom="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/labelSpinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="20sp"
+        android:text="Currency: " />
+
+    <Spinner
+        android:entries="@array/currency_array"
+        android:prompt="@string/currency_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@id/labelSpinner1"
+        android:layout_toRightOf="@id/labelSpinner1"
+        android:id="@+id/spinner1" />
+</LinearLayout>
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:drawableLeft="@drawable/ic_qrcode_black_48dp"
+        android:textSize="24sp"
+        android:text="@string/qrbutton" />
+
+    <Button
+        android:text="@string/textbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:drawableLeft="@drawable/icons8_paste_50"
+        android:textSize="24sp"
+        android:id="@+id/textbutton" />
+</LinearLayout>
