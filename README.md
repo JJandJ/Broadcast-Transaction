@@ -15,7 +15,9 @@ In cold storage situations, you can create and sign your transaction, but you ar
 
 This app allows you to scan the QR code or type (paste?) the base43/hex string and then broadcasts it to the network.
 
-Installation
+Download from Google Play - https://play.google.com/store/apps/details?id=app.jjandj.broadcaster
+
+Manual Installation
 1) Download the APK file here - https://github.com/JJandJ/Broadcast-Transaction/tree/master/app/release
 2) Copy the file to your device, or download using your device.
 3) Open the file on your device, this will install the app (you may get a warning about installing apps from unknown sources)
