@@ -57,6 +57,7 @@
             android:padding="16dp"
             android:drawableLeft="@drawable/icons8_paste_50"
             android:textSize="24sp"
+            android:background="@color/colorAccent"
             android:text="Enter / paste Transaction Data" />
 
     <Button
@@ -66,6 +67,8 @@
         android:padding="16dp"
         android:drawableLeft="@drawable/broadcast_icon"
         android:textSize="24sp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="30dp"
         android:text="Broadcast Now" />
 
     </LinearLayout>

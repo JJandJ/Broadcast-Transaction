@@ -34,7 +34,8 @@
         android:padding="16dp"
         android:drawableLeft="@drawable/ic_qrcode_black_48dp"
         android:textSize="24sp"
-        android:text="@string/qrbutton" />
+        android:text="@string/qrbutton"
+        android:background="@color/colorAccent"/>
 
     <Button
         android:text="@string/textbutton"
@@ -43,5 +44,7 @@
         android:padding="16dp"
         android:drawableLeft="@drawable/icons8_paste_50"
         android:textSize="24sp"
-        android:id="@+id/textbutton" />
+        android:id="@+id/textbutton"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorAccent"/>
 </LinearLayout>

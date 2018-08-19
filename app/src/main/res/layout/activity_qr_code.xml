@@ -53,6 +53,7 @@
         android:drawableLeft="@drawable/ic_qrcode_black_48dp"
         android:textSize="24sp"
         android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
         android:text="Scan QR Code" />
 
 
@@ -64,6 +65,8 @@
         android:drawableLeft="@drawable/broadcast_icon"
         android:textSize="24sp"
         android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="30dp"
         android:text="Broadcast Transaction" />
 
 </RelativeLayout>
