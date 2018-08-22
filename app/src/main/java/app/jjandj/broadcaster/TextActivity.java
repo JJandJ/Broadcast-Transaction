@@ -175,7 +175,7 @@ public class TextActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         // Display the first 1000 characters of the response string.
                         textViewAddress.setText("Response is: "+ response + " \n \n The txid has been copied to the clipboard.");
-                        if ((currencyString.equals("Bitcoin Cash")) || (currencyString.equals("Bitcoin Cash TESTNET")))
+                        if ((currencyString.equals("Bitcoin Cash"))||(currencyString.equals("Bitcoin Cash TESTNET")))
                         {
                             String txid = response.substring(1, response.length()-1);
                             CopyTxIdToClipboard(txid);
