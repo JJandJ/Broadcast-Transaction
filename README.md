@@ -1,9 +1,9 @@
 # Broadcast-Transaction
 Android app to broadcast cryptocurrency transactions from a base43/hex QR code or string.
 
-It currently supports BTC, LTC, DASH, ZCASH and DOGECOIN and their test networks.
+It currently supports BTC, BCH, LTC, DASH, ZCASH and DOGECOIN and their test networks.
 
-It uses the chain.so API to broadcast the transaction.
+It uses the chain.so and bitcoin.com API's to broadcast the transaction.
 
 All feedback is appreciated - JJandJ@tuta.io
 
