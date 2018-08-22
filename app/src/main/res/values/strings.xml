@@ -8,13 +8,14 @@
     <string-array name="currency_array">
         <item>Bitcoin TESTNET</item>
         <item>Bitcoin</item>
-       <!-- <item>Bitcoin Cash</item> -->
+        <item>Bitcoin Cash</item>
         <item>Litecoin</item>
         <!-- <item>Ethereum</item> -->
         <!-- <item>Ethereum Classic</item> -->
         <item>DASH</item>
         <item>ZCASH</item>
         <item>DOGECOIN</item>
+        <item>Bitcoin Cash TESTNET</item>
         <item>Litecoin TESTNET</item>
         <item>DASH TESTNET</item>
         <item>ZCASH TESTNET</item>

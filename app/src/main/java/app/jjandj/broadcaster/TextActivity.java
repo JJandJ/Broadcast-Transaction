@@ -34,6 +34,7 @@ import org.json.JSONTokener;
 
 import java.math.BigInteger;
 import java.util.Arrays;
+import java.util.Currency;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -47,7 +48,7 @@ public class TextActivity extends AppCompatActivity {
     private TextView textViewName, textViewAddress;
     String currencyString = "";
     String transactionDataString = "";
-    String network;
+    String network = "";
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -163,6 +164,9 @@ public class TextActivity extends AppCompatActivity {
 
         String url ="https://chain.so/api/v2/send_tx/"+network;
 
+        if (currencyString.equals("Bitcoin Cash")) {url = "http://rest.bitcoin.com/v1/rawtransactions/sendRawTransaction/" + transactionData;}
+        if (currencyString.equals("Bitcoin Cash TESTNET")) {url = "http://trest.bitcoin.com/v1/rawtransactions/sendRawTransaction/" + transactionData;}
+
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest( POST
                 , url,
@@ -171,9 +175,17 @@ public class TextActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         // Display the first 1000 characters of the response string.
                         textViewAddress.setText("Response is: "+ response + " \n \n The txid has been copied to the clipboard.");
-                        int index1 = response.indexOf("txid");
-                        String txid = response.substring(index1 + 6, response.length()-5);
-                        CopyTxIdToClipboard(txid);
+                        if ((currencyString.equals("Bitcoin Cash")) || (currencyString.equals("Bitcoin Cash TESTNET")))
+                        {
+                            String txid = response.substring(1, response.length()-1);
+                            CopyTxIdToClipboard(txid);
+                        }
+                        else
+                                {
+                            int index1 = response.indexOf("txid");
+                            String txid = response.substring(index1 + 9, response.length() - 7);
+                            CopyTxIdToClipboard(txid);
+                            }
 
                     }
                 }, new com.android.volley.Response.ErrorListener() {
